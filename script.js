@@ -22,7 +22,8 @@ function displayResults(responseJson) {
             <div class="item">
                 <img class="recipeLink" data-id="${responseJson.results[i].id}" src="${responseJson.results[i].image}" width="300">
             </div>
-        </div>`)
+        </div>
+        <hr>`)
         $('.results-list').html(endResult);
         $('.results-list').removeClass('hidden');
     }

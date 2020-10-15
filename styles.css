@@ -10,6 +10,7 @@ h1 {
 }
 
 h2 {
+
     text-align: center;
     font-size: 26px;
     color: white;
@@ -45,7 +46,7 @@ li {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gill Sans', sans-serif;
     background-image: url("Food.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -53,9 +54,13 @@ body {
     text-align: center;
 }
 
+hr {
+    max-width: 1000px;
+}
+
 div.transbox {
     margin: 5% auto 5% auto;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(130, 130, 130, 0.6);
     border: 5px solid black;
     max-width: 1500px;
 }
@@ -76,7 +81,7 @@ button:hover {
 .container {
     max-width: 600px;
     margin: 0 auto;
-    margin-bottom: 250px;
+    margin-bottom: 100px;
 }
   
 .error-message {
@@ -99,7 +104,7 @@ button:hover {
 
 a:hover {
     cursor: pointer;
-    color: blue;
+    color: red;
 }
   
 @media all and (min-width: 800px) {
