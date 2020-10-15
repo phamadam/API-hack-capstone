@@ -40,9 +40,14 @@ li {
     margin-bottom: 5px;
 }
 
+.results-list {
+    box-shadow: 0 0 6px 0 black;
+}
+
 .whiteText {
     color: white;
     border-radius: 20px;
+    text-shadow: 0 0 4px black;
 }
 
 body {
@@ -60,7 +65,7 @@ hr {
 
 div.transbox {
     margin: 2% 2% 2% 2%;
-    background: rgba(130, 130, 130, 0.6);
+    background: rgba(70, 70, 70, 0.7);
     border: 5px solid black;
     max-width: 1500px;
 }
