@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+img {
+    cursor: pointer;
+}
+
+ul {
+    text-align: center;
+}
+
+.whiteText {
+    color: white;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("Food.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+form {
+    border-radius: 10px;
+}
+
+button, input[type="text"] {
+    padding: 5px;
+}
+  
+button:hover {
+    cursor: pointer;
+}
+  
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+.error-message {
+      color: red;
+}
+.hidden {
+      display: none;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+  
+.item {
+    flex: 1;
+    margin: 20px;
+}
+
+a:link { color: blue; }
+a:hover { cursor: pointer;}
+  
+@media all and (min-width: 800px) {
+    section {
+      padding: 0 10%;
+    }
+    .group {
+      flex-direction: row;
+    }
+}
