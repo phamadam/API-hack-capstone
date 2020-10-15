@@ -59,7 +59,7 @@ hr {
 }
 
 div.transbox {
-    margin: 5% auto 5% auto;
+    margin: 2% 2% 2% 2%;
     background: rgba(130, 130, 130, 0.6);
     border: 5px solid black;
     max-width: 1500px;
