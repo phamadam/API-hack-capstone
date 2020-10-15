@@ -9,13 +9,13 @@ function formatQueryParams(params) {
         .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
     return queryItems.join('&');
 }
-
+//displays the first set list of recipes
 function displayResults(responseJson) {
     let endResult = [];
     var i = 0;
     for (i = 0; i < responseJson.results.length; i++) {
         endResult.push(
-        `<div class="group whiteText">
+        `<div class="group whiteText centered">
             <div class="item">
                 <h3><a class="recipeLink" data-id="${responseJson.results[i].id}">${responseJson.results[i].title}</a></h3>
             </div>
@@ -28,6 +28,7 @@ function displayResults(responseJson) {
     }
 }
 
+//displays the recipe's information gathered from the data of the click
 function displayRecipeInfo(responseJson) {
     //used to loop through the ingredients
     function loopIngredients() {
@@ -62,6 +63,7 @@ function displayRecipeInfo(responseJson) {
         $('.results-list').removeClass('hidden');
 }
 
+//collects the data from the click and preforms another fetch request for the recipe information
 function getInfo() {
     $('.results-list').on('click', '.recipeLink', function(event) {
         event.preventDefault();
@@ -81,6 +83,7 @@ function getInfo() {
     })
 }
 
+//proforms the original fetch request for the list of recipes
 function getRecipe(query) {
     const params = {
         query: query,
