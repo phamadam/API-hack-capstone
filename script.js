@@ -78,7 +78,7 @@ function getInfo() {
             .then(response => response.json())
             .then(responseJson => displayRecipeInfo(responseJson))
             .catch(error => {
-                $('#js-error-message').text(`Something went wrong: ${error.message}`)
+                $('#js-error-message').text(`Something went wrong try again later.`)
             });
     })
 }
@@ -100,7 +100,7 @@ function getRecipe(query) {
         .then(response => response.json())
         .then(responseJson => displayResults(responseJson))
         .catch(error => {
-            $('#js-error-message').text(`Something went wrong: ${error.message}`)
+            $('#js-error-message').text(`Something went wrong try again later.`)
         });
 }
 

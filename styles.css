@@ -41,7 +41,6 @@ li {
 
 .whiteText {
     color: white;
-    background-color: gray;
     border-radius: 20px;
 }
 
@@ -52,6 +51,12 @@ body {
     background-attachment: fixed;
     background-position: center center;
     text-align: center;
+}
+
+div.transbox {
+    margin: 5% 5% 5% 5%;
+    background: rgba(255, 255, 255, 0.4);
+    border: 5px solid black;
 }
 
 form {
@@ -70,6 +75,7 @@ button:hover {
 .container {
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 250px;
 }
   
 .error-message {
@@ -90,8 +96,10 @@ button:hover {
     margin: 20px;
 }
 
-a:link { color: blue; }
-a:hover { cursor: pointer;}
+a:hover {
+    cursor: pointer;
+    color: blue;
+}
   
 @media all and (min-width: 800px) {
     section {

@@ -9,21 +9,23 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Daily Cookin'</h1>
-        <h2>What would you like to cook?</h2>
+    <div class="transbox">
+        <div class="container">
+            <h1>Daily Cookin'</h1>
+            <h2>What would you like to cook?</h2>
 
-        <form id="recipe-form">
-            <input type="text" name="recipeSearch" id="js-recipe-search" aria-label="search" placeholder="Search" required>
+            <form id="recipe-form">
+                <input type="text" name="recipeSearch" id="js-recipe-search" aria-label="search" placeholder="Search" required>
 
-            <button type="submit">Go!</button>
-        </form>
+                <button type="submit">Go!</button>
+            </form>
 
-        <p id="js-error-message" class="error-message"></p>
-    </div>
+            <p id="js-error-message" class="error-message"></p>
+        </div>
 
-    <div class="results-list hidden">
-        <h3>Results</h3>
+        <div class="results-list hidden">
+            <h3>Results</h3>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
