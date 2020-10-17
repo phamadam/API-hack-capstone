@@ -1,7 +1,7 @@
 'use strict';
 
-const apiKey = "f38898caa70c4d1a9a9b14589fd8e362"
-const searchURL = "https://api.spoonacular.com/recipes/complexSearch"
+const apiKey = "f38898caa70c4d1a9a9b14589fd8e362";
+const searchURL = "https://api.spoonacular.com/recipes/complexSearch";
 
 //translates user search into url
 function formatQueryParams(params) {
