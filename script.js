@@ -1,7 +1,7 @@
 'use strict';
 
-const apiKey = "f38898caa70c4d1a9a9b14589fd8e362";
-const searchURL = "https://api.spoonacular.com/recipes/complexSearch";
+const apiKey = 'f38898caa70c4d1a9a9b14589fd8e362';
+const searchURL = 'https://api.spoonacular.com/recipes/complexSearch';
 
 //translates user search into url
 function formatQueryParams(params) {
@@ -12,15 +12,15 @@ function formatQueryParams(params) {
 //displays the first set list of recipes
 function displayResults(responseJson) {
     let endResult = [];
-    var i = 0;
+    let i = 0;
     for (i = 0; i < responseJson.results.length; i++) {
         endResult.push(
-        `<div class="group whiteText centered">
-            <div class="item">
-                <h3><a class="recipeLink" data-id="${responseJson.results[i].id}">${responseJson.results[i].title}</a></h3>
+        `<div class='group whiteText centered'>
+            <div class='item'>
+                <h3><a class='recipeLink' data-id='${responseJson.results[i].id}'>${responseJson.results[i].title}</a></h3>
             </div>
-            <div class="item">
-                <img class="recipeLink" data-id="${responseJson.results[i].id}" src="${responseJson.results[i].image}" width="300">
+            <div class='item'>
+                <img class='recipeLink' data-id='${responseJson.results[i].id}' src='${responseJson.results[i].image}' width='300'>
             </div>
         </div>
         <hr>`)
@@ -34,23 +34,23 @@ function displayRecipeInfo(responseJson) {
     //used to loop through the ingredients
     function loopIngredients() {
         let ingredientList = [];
-        var i = 0;
+        let i = 0;
         for (i = 0; i < responseJson.extendedIngredients.length; i++) {
             ingredientList.push(`<li>${responseJson.extendedIngredients[i].name} (${responseJson.extendedIngredients[i].amount} ${responseJson.extendedIngredients[i].unit})</li>`)
         }
-        return ingredientList.join("");
+        return ingredientList.join('');
     }
-    //${loopIngredients()} calls the function that loops through the ingredients
+    // ${loopIngredients()} calls the function that loops through the ingredients
     let endResult = [
-        `<div class="item whiteText">
+        `<div class='item whiteText'>
             <h2>${responseJson.title}<h2>
         </div>
-        <div class="group whiteText">
-            <div class="item">
+        <div class='group whiteText'>
+            <div class='item'>
                 <h3>Directions</h3>
                 <p>${responseJson.instructions}</p>
             </div>
-            <div class="item">
+            <div class='item'>
                 <h3>Cook Time</h3>
                 <p>${responseJson.readyInMinutes} Minutes</p>
                 <hr>
@@ -68,12 +68,12 @@ function displayRecipeInfo(responseJson) {
 function getInfo() {
     $('.results-list').on('click', '.recipeLink', function(event) {
         event.preventDefault();
-        var id = $(event.currentTarget).data('id')
+        const id = $(event.currentTarget).data('id')
 
         const options = {
             headers: new Headers({
-                "Content-Type": "application/json"})
-          };
+                'Content-Type': 'application/json'})
+        };
         
         fetch(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey}`, options)
             .then(response => response.json())
@@ -94,8 +94,8 @@ function getRecipe(query) {
 
     const options = {
         headers: new Headers({
-            "Content-Type": "application/json"})
-      };
+            'Content-Type': 'application/json'})
+    };
 
     fetch(url, options)
         .then(response => response.json())
